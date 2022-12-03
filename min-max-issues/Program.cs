@@ -47,34 +47,64 @@ namespace min_max_issues
             //}
             //Console.WriteLine($"minS : {minS}");
 
+            //int limit, num, min, max, minId = 1, maxId = 1;
+            //Console.Write("Limit : ");
+            //limit = Convert.ToInt32(Console.ReadLine());
+            //num = Convert.ToInt32(Console.ReadLine());
+            //min = num;
+            //max = num;
+            //for (int i = 2; i <= limit; i++)
+            //{
+            //    num = Convert.ToInt32(Console.ReadLine());
+            //    if (min > num)
+            //    {
+            //        min = num;
+            //        minId = i;
+            //    }
+            //    if (max < num)
+            //    {
+            //        max = num;
+            //        maxId = i;
+            //    }
+            //}
+
+            //if (maxId > minId)
+            //{
+            //    Console.WriteLine($"min element 1 - keladi : {minId}");
+            //}
+            //else
+            //{
+            //    Console.WriteLine($"max element 1 - keladi : {maxId}");
+            //}
+
             int limit, num, min, max, minId = 1, maxId = 1;
             Console.Write("Limit : ");
             limit = Convert.ToInt32(Console.ReadLine());
             num = Convert.ToInt32(Console.ReadLine());
             min = num;
             max = num;
-            for (int i = 2; i < limit; i++)
+            for (int i = 2; i <= limit; i++)
             {
                 num = Convert.ToInt32(Console.ReadLine());
-                if (min > num)
+                if (min >= num)
                 {
                     min = num;
                     minId = i;
                 }
-                if (max < num)
+                if (max <= num)
                 {
                     max = num;
                     maxId = i;
                 }
             }
 
-            if (maxId > minId)
+            if (maxId < minId)
             {
-                Console.WriteLine($"min element 1 - keladi : {minId}");
+                Console.WriteLine($"min element oxirgi keladi : {minId}");
             }
             else
             {
-                Console.WriteLine($"max element 1 - keladi : {maxId}");
+                Console.WriteLine($"max element oxirgi keladi : {maxId}");
             }
         }
     }
