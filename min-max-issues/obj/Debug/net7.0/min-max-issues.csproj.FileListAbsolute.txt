@@ -1,0 +1,15 @@
+D:\MyC#\min-max-issues\min-max-issues\bin\Debug\net7.0\min-max-issues.exe
+D:\MyC#\min-max-issues\min-max-issues\bin\Debug\net7.0\min-max-issues.deps.json
+D:\MyC#\min-max-issues\min-max-issues\bin\Debug\net7.0\min-max-issues.runtimeconfig.json
+D:\MyC#\min-max-issues\min-max-issues\bin\Debug\net7.0\min-max-issues.dll
+D:\MyC#\min-max-issues\min-max-issues\bin\Debug\net7.0\min-max-issues.pdb
+D:\MyC#\min-max-issues\min-max-issues\obj\Debug\net7.0\min-max-issues.csproj.AssemblyReference.cache
+D:\MyC#\min-max-issues\min-max-issues\obj\Debug\net7.0\min-max-issues.GeneratedMSBuildEditorConfig.editorconfig
+D:\MyC#\min-max-issues\min-max-issues\obj\Debug\net7.0\min-max-issues.AssemblyInfoInputs.cache
+D:\MyC#\min-max-issues\min-max-issues\obj\Debug\net7.0\min-max-issues.AssemblyInfo.cs
+D:\MyC#\min-max-issues\min-max-issues\obj\Debug\net7.0\min-max-issues.csproj.CoreCompileInputs.cache
+D:\MyC#\min-max-issues\min-max-issues\obj\Debug\net7.0\min-max-issues.dll
+D:\MyC#\min-max-issues\min-max-issues\obj\Debug\net7.0\refint\min-max-issues.dll
+D:\MyC#\min-max-issues\min-max-issues\obj\Debug\net7.0\min-max-issues.pdb
+D:\MyC#\min-max-issues\min-max-issues\obj\Debug\net7.0\min-max-issues.genruntimeconfig.cache
+D:\MyC#\min-max-issues\min-max-issues\obj\Debug\net7.0\ref\min-max-issues.dll
