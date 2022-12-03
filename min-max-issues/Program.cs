@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Xml;
 
 namespace min_max_issues
 {
@@ -6,26 +7,75 @@ namespace min_max_issues
     {
         static void Main(string[] args)
         {
-            int num, limit, max, min;
+            //int num, limit, max, min;
+            //Console.Write("Limit : ");
+            //limit = Convert.ToInt32(Console.ReadLine());
+            //num = Convert.ToInt32(Console.ReadLine());
+            //max = num;
+            //min = num;
+            //for (int i = 1; i < limit; i++)
+            //{
+            //    num = Convert.ToInt32(Console.ReadLine());
+            //    if (min > num)
+            //    {
+            //        min = num;
+            //    }
+            //    if (max < num)
+            //    {
+            //        max = num;
+            //    }
+            //}
+
+            //Console.WriteLine($"max : {max},    min : {min}");
+
+            //int a, b, s, minS, limit;
+
+            //Console.Write("Limit : ");
+            //limit = Convert.ToInt32(Console.ReadLine());
+            //a = Convert.ToInt32(Console.ReadLine());
+            //b = Convert.ToInt32(Console.ReadLine());
+            //minS = a * b;
+
+            //for (int i = 1; i < limit; i++)
+            //{
+            //    a = Convert.ToInt32(Console.ReadLine());
+            //    b = Convert.ToInt32(Console.ReadLine());
+            //    if (minS > a * b)
+            //    {
+            //        minS = a * b;
+            //    }
+            //}
+            //Console.WriteLine($"minS : {minS}");
+
+            int limit, num, min, max, minId = 1, maxId = 1;
             Console.Write("Limit : ");
             limit = Convert.ToInt32(Console.ReadLine());
             num = Convert.ToInt32(Console.ReadLine());
-            max = num;
             min = num;
-            for (int i = 1; i < limit; i++)
+            max = num;
+            for (int i = 2; i < limit; i++)
             {
                 num = Convert.ToInt32(Console.ReadLine());
                 if (min > num)
                 {
                     min = num;
+                    minId = i;
                 }
                 if (max < num)
                 {
                     max = num;
+                    maxId = i;
                 }
             }
 
-            Console.WriteLine($"max : {max},    min : {min}");
+            if (maxId > minId)
+            {
+                Console.WriteLine($"min element 1 - keladi : {minId}");
+            }
+            else
+            {
+                Console.WriteLine($"max element 1 - keladi : {maxId}");
+            }
         }
     }
 }
