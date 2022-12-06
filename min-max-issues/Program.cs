@@ -125,24 +125,45 @@ namespace min_max_issues
 
             //Console.WriteLine($"1 - katta element indeksi : {idMax}");
 
-            int b, c, limit, max = 0, id = 0, kiritiladiganSon;
+            //int b, c, limit, max = 0, id = 0, kiritiladiganSon;
+            //Console.Write("Limit : ");
+            //limit = Convert.ToInt32(Console.ReadLine());
+            //Console.Write("b = ");
+            //b = Convert.ToInt32(Console.ReadLine());
+            //Console.Write("c = ");
+            //c = Convert.ToInt32(Console.ReadLine());
+            //for (int i = 1; i <= limit; i++)
+            //{
+            //    kiritiladiganSon = Convert.ToInt32(Console.ReadLine());
+            //    if (kiritiladiganSon > b && kiritiladiganSon < c && (max > kiritiladiganSon || id == 0))
+            //    {
+            //        max = kiritiladiganSon;
+            //        id = i;
+            //    }
+            //}
+
+            //Console.WriteLine($"tartib raqam : {id}");
+
+            // 8 -->  4 3 2 1 6 7 1 3
+            //        1 2 3 4 1 3 4 5
+
+            int limit, kiritiladiganSon, min = 0, sum = 0, id = 0;
             Console.Write("Limit : ");
             limit = Convert.ToInt32(Console.ReadLine());
-            Console.Write("b = ");
-            b = Convert.ToInt32(Console.ReadLine());
-            Console.Write("c = ");
-            c = Convert.ToInt32(Console.ReadLine());
             for (int i = 1; i <= limit; i++)
             {
                 kiritiladiganSon = Convert.ToInt32(Console.ReadLine());
-                if (kiritiladiganSon > b && kiritiladiganSon < c && (max > kiritiladiganSon || id == 0))
+                if (kiritiladiganSon >= min || i == 1)
                 {
-                    max = kiritiladiganSon;
+                    min = kiritiladiganSon;
                     id = i;
                 }
             }
+            // algoritm shunday: bitta elementni tanlab olishim kerak bo'ladi,
+            // shu element bilan qolgani solishtiraldi
+            Console.WriteLine($"soni : {id - 1}");
 
-            Console.WriteLine($"tartib raqam : {id}");
+
         }
     }
 }
