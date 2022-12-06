@@ -107,22 +107,42 @@ namespace min_max_issues
             //    Console.WriteLine($"max element oxirgi keladi : {maxId}");
             //}
 
-            int b, limit, num, min = 0, idMax = 0;
+            //int b, limit, num, min = 0, idMax = 0;
+            //Console.Write("Limit : ");
+            //limit = Convert.ToInt32(Console.ReadLine());
+            //Console.Write("b = ");
+            //b = Convert.ToInt32(Console.ReadLine());
+            //for (int i = 1; i <= limit; i++)
+            //{
+            //    num = Convert.ToInt32(Console.ReadLine());
+            //    // limit = 4, b = 1, 1 2 3 4
+            //    if((num > b) && ((min > num) || (idMax == 0)))
+            //    {
+            //        min = num;
+            //        idMax= i;
+            //    }
+            //}
+
+            //Console.WriteLine($"1 - katta element indeksi : {idMax}");
+
+            int b, c, limit, max = 0, id = 0, kiritiladiganSon;
             Console.Write("Limit : ");
             limit = Convert.ToInt32(Console.ReadLine());
             Console.Write("b = ");
             b = Convert.ToInt32(Console.ReadLine());
+            Console.Write("c = ");
+            c = Convert.ToInt32(Console.ReadLine());
             for (int i = 1; i <= limit; i++)
             {
-                num = Convert.ToInt32(Console.ReadLine());
-                if((num > b) && ((min > num) || (idMax == 0)))
+                kiritiladiganSon = Convert.ToInt32(Console.ReadLine());
+                if (kiritiladiganSon > b && kiritiladiganSon < c && (max > kiritiladiganSon || id == 0))
                 {
-                    min = num;
-                    idMax= i;
+                    max = kiritiladiganSon;
+                    id = i;
                 }
             }
 
-            Console.WriteLine($"1 - katta element indeksi : {idMax}");
+            Console.WriteLine($"tartib raqam : {id}");
         }
     }
 }
