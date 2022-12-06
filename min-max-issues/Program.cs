@@ -125,6 +125,8 @@ namespace min_max_issues
 
             //Console.WriteLine($"1 - katta element indeksi : {idMax}");
 
+            // 14 - misol tugadi 
+
             //int b, c, limit, max = 0, id = 0, kiritiladiganSon;
             //Console.Write("Limit : ");
             //limit = Convert.ToInt32(Console.ReadLine());
@@ -141,27 +143,49 @@ namespace min_max_issues
             //        id = i;
             //    }
             //}
-
+            // 15 - misol tugadi
             //Console.WriteLine($"tartib raqam : {id}");
 
             // 8 -->  4 3 2 1 6 7 1 3
             //        1 2 3 4 1 3 4 5
 
-            int limit, kiritiladiganSon, min = 0, sum = 0, id = 0;
+            //int limit, kiritiladiganSon, min = 0, sum = 0, id = 0;
+            //Console.Write("Limit : ");
+            //limit = Convert.ToInt32(Console.ReadLine());
+            //for (int i = 1; i <= limit; i++)
+            //{
+            //    kiritiladiganSon = Convert.ToInt32(Console.ReadLine());
+            //    if (kiritiladiganSon < min || id == 0)
+            //    {
+            //        min = kiritiladiganSon;
+            //        id = i;
+            //    }
+            //}
+            // algoritm shunday: bitta elementni tanlab olishim kerak bo'ladi,
+            // shu element bilan qolgani solishtiraldi
+            //Console.WriteLine($"soni : {id - 1}");
+
+            // 17-misol tugadi
+
+
+            int limit, kiritSon, idFirst = 0, idLast = 0, max = 0;
             Console.Write("Limit : ");
             limit = Convert.ToInt32(Console.ReadLine());
             for (int i = 1; i <= limit; i++)
             {
-                kiritiladiganSon = Convert.ToInt32(Console.ReadLine());
-                if (kiritiladiganSon >= min || i == 1)
+                kiritSon = Convert.ToInt32(Console.ReadLine());
+                if (max < kiritSon || idFirst == 0)
                 {
-                    min = kiritiladiganSon;
-                    id = i;
+                    max = kiritSon;
+                    idFirst = i;
+                }
+                if (max <= kiritSon || idLast == 0)
+                {
+                    max = kiritSon;
+                    idLast = i;
                 }
             }
-            // algoritm shunday: bitta elementni tanlab olishim kerak bo'ladi,
-            // shu element bilan qolgani solishtiraldi
-            Console.WriteLine($"soni : {id - 1}");
+            Console.WriteLine($"soni : {idLast - idFirst - 1}");
 
 
         }
