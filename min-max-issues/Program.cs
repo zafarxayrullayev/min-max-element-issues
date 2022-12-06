@@ -185,7 +185,14 @@ namespace min_max_issues
                     idLast = i;
                 }
             }
-            Console.WriteLine($"soni : {idLast - idFirst - 1}");
+            if (idLast - idFirst == 0)
+            {
+                Console.WriteLine("0");
+            }
+            else
+            {
+                Console.WriteLine($"soni : {idLast - idFirst - 1}");
+            }
 
 
         }
