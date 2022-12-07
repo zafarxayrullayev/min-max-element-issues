@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Xml;
 
 namespace min_max_issues
@@ -234,38 +235,63 @@ namespace min_max_issues
             // 19 tugadi
 
 
-            int limit, kiritSon, soniMax = 1, soniMin = 1, min, max;
+            //int limit, kiritSon, soniMax = 1, soniMin = 1, min, max;
+            //Console.Write("limit : ");
+            //limit = Convert.ToInt32(Console.ReadLine());
+            //kiritSon = Convert.ToInt32(Console.ReadLine());
+            //min = kiritSon;
+            //max = kiritSon;
+            //for (int i = 1; i < limit; i++)
+            //{
+            //    kiritSon = Convert.ToInt32(Console.ReadLine());
+            //    if (min > kiritSon)
+            //    {
+            //        min = kiritSon;
+            //        soniMin = 0;
+            //    }
+            //    if (min == kiritSon)
+            //    {
+            //        soniMin++;
+            //    }
+
+            //    if (max < kiritSon)
+            //    {
+            //        max = kiritSon;
+            //        soniMax = 0;
+            //    }
+            //    if (max == kiritSon)
+            //    {
+            //        soniMax++;
+            //    }
+            //}
+
+            //Console.WriteLine($"min soni : {soniMin} va max soni : {soniMax}");
+
+            // 20 - tugadi
+            double limit, kiritSon, min, max, sum;
             Console.Write("limit : ");
             limit = Convert.ToInt32(Console.ReadLine());
             kiritSon = Convert.ToInt32(Console.ReadLine());
             min = kiritSon;
             max = kiritSon;
+            sum = kiritSon;
             for (int i = 1; i < limit; i++)
             {
                 kiritSon = Convert.ToInt32(Console.ReadLine());
                 if (min > kiritSon)
                 {
                     min = kiritSon;
-                    soniMin = 0;
                 }
-                if (min == kiritSon)
-                {
-                    soniMin++;
-                }
-
                 if (max < kiritSon)
                 {
                     max = kiritSon;
-                    soniMax = 0;
                 }
-                if (max == kiritSon)
-                {
-                    soniMax++;
-                }
+
+                sum += kiritSon;
             }
 
-            Console.WriteLine($"min soni : {soniMin} va max soni : {soniMax}");
-
+            sum -= (max + min);
+            Console.WriteLine($"o'rta qiymat : {sum / (limit - 2)}");
         }
     }
 }
