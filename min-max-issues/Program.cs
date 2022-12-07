@@ -211,27 +211,60 @@ namespace min_max_issues
 
             //Console.WriteLine($"soni : {id}");
 
-            int limit, kiritSon, count = 1, id =0, min;
+            //int limit, kiritSon, count = 1, id =0, min;
+            //Console.Write("limit : ");
+            //limit = Convert.ToInt32(Console.ReadLine());
+            //kiritSon = Convert.ToInt32(Console.ReadLine());
+            //min = kiritSon;
+            //for (int i = 1; i < limit; i++)
+            //{
+            //    kiritSon = Convert.ToInt32(Console.ReadLine());
+            //    if (min > kiritSon)
+            //    {
+            //        min = kiritSon;
+            //        count = 0;
+            //    }
+            //    if (kiritSon == min)
+            //    {
+            //        count++;
+            //    }
+            //}
+
+            //Console.WriteLine($"soni {count}");
+            // 19 tugadi
+
+
+            int limit, kiritSon, soniMax = 1, soniMin = 1, min, max;
             Console.Write("limit : ");
             limit = Convert.ToInt32(Console.ReadLine());
             kiritSon = Convert.ToInt32(Console.ReadLine());
             min = kiritSon;
+            max = kiritSon;
             for (int i = 1; i < limit; i++)
             {
                 kiritSon = Convert.ToInt32(Console.ReadLine());
                 if (min > kiritSon)
                 {
                     min = kiritSon;
-                    count = 0;
+                    soniMin = 0;
                 }
-                if (kiritSon == min)
+                if (min == kiritSon)
                 {
-                    count++;
+                    soniMin++;
+                }
+
+                if (max < kiritSon)
+                {
+                    max = kiritSon;
+                    soniMax = 0;
+                }
+                if (max == kiritSon)
+                {
+                    soniMax++;
                 }
             }
 
-            Console.WriteLine($"soni {count}");
-            // 5 --> 1 2 3 1 4
+            Console.WriteLine($"min soni : {soniMin} va max soni : {soniMax}");
 
         }
     }
