@@ -168,32 +168,70 @@ namespace min_max_issues
             // 17-misol tugadi
 
 
-            int limit, kiritSon, idFirst = 0, idLast = 0, max = 0;
-            Console.Write("Limit : ");
+            //int limit, kiritSon, idFirst = 0, idLast = 0, max = 0;
+            //Console.Write("Limit : ");
+            //limit = Convert.ToInt32(Console.ReadLine());
+            //for (int i = 1; i <= limit; i++)
+            //{
+            //    kiritSon = Convert.ToInt32(Console.ReadLine());
+            //    if (max < kiritSon || idFirst == 0)
+            //    {
+            //        max = kiritSon;
+            //        idFirst = i;
+            //    }
+            //    if (max <= kiritSon || idLast == 0)
+            //    {
+            //        max = kiritSon;
+            //        idLast = i;
+            //    }
+            //}
+            //if (idLast - idFirst == 0)
+            //{
+            //    Console.WriteLine("0");
+            //}
+            //else
+            //{
+            //    Console.WriteLine($"soni : {idLast - idFirst - 1}");
+            //}
+
+            // 18 - misol tugadi 
+            //int limit, kiritSon, id = 0, min = 0, count = 0;
+            //Console.Write("Limit : ");
+            //limit = Convert.ToInt32(Console.ReadLine());
+            //for (int i = 1; i <= limit; i++)
+            //{
+            //    kiritSon = Convert.ToInt32(Console.ReadLine());
+            //    if (min >= kiritSon || id == 0)
+            //    {
+            //        min = kiritSon;
+            //        id = i;
+
+            //    }
+            //}
+
+            //Console.WriteLine($"soni : {id}");
+
+            int limit, kiritSon, count = 1, id =0, min;
+            Console.Write("limit : ");
             limit = Convert.ToInt32(Console.ReadLine());
-            for (int i = 1; i <= limit; i++)
+            kiritSon = Convert.ToInt32(Console.ReadLine());
+            min = kiritSon;
+            for (int i = 1; i < limit; i++)
             {
                 kiritSon = Convert.ToInt32(Console.ReadLine());
-                if (max < kiritSon || idFirst == 0)
+                if (min > kiritSon)
                 {
-                    max = kiritSon;
-                    idFirst = i;
+                    min = kiritSon;
+                    count = 0;
                 }
-                if (max <= kiritSon || idLast == 0)
+                if (kiritSon == min)
                 {
-                    max = kiritSon;
-                    idLast = i;
+                    count++;
                 }
-            }
-            if (idLast - idFirst == 0)
-            {
-                Console.WriteLine("0");
-            }
-            else
-            {
-                Console.WriteLine($"soni : {idLast - idFirst - 1}");
             }
 
+            Console.WriteLine($"soni {count}");
+            // 5 --> 1 2 3 1 4
 
         }
     }
