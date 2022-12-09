@@ -316,22 +316,41 @@ namespace min_max_issues
 
             // 22 - misol 
 
+            //int limit, kiritilganSon = 0, kiritilganniSaqla = 0, max = int.MinValue;
+            //Console.Write("Limit : ");
+            //limit = Convert.ToInt32(Console.ReadLine());
+            //for (int i = 1; i <= limit; i++)
+            //{
+            //    kiritilganSon = Convert.ToInt32(Console.ReadLine());
+            //    if (max < kiritilganSon + kiritilganniSaqla)
+            //    {
+            //        max = kiritilganniSaqla + kiritilganSon;
+            //    }
+            //    kiritilganniSaqla = kiritilganSon;
+            //}
+
+            //Console.WriteLine($"max son : {max}");
+
+            // 24 - misol
+
+
             int limit, kiritilganSon = 0, kiritilganniSaqla = 0, max = int.MinValue;
             Console.Write("Limit : ");
             limit = Convert.ToInt32(Console.ReadLine());
             for (int i = 1; i <= limit; i++)
             {
                 kiritilganSon = Convert.ToInt32(Console.ReadLine());
-                if (max < kiritilganSon + kiritilganniSaqla)
+                if (max < kiritilganSon * kiritilganniSaqla)
                 {
-                    max = kiritilganniSaqla + kiritilganSon;
+                    max = kiritilganniSaqla * kiritilganSon;
                 }
                 kiritilganniSaqla = kiritilganSon;
             }
 
             Console.WriteLine($"max son : {max}");
 
-            
+
+
 
 
         }
