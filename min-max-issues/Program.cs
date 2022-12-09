@@ -268,30 +268,72 @@ namespace min_max_issues
             //Console.WriteLine($"min soni : {soniMin} va max soni : {soniMax}");
 
             // 20 - tugadi
-            double limit, kiritSon, min, max, sum;
-            Console.Write("limit : ");
-            limit = Convert.ToInt32(Console.ReadLine());
-            kiritSon = Convert.ToInt32(Console.ReadLine());
-            min = kiritSon;
-            max = kiritSon;
-            sum = kiritSon;
-            for (int i = 1; i < limit; i++)
-            {
-                kiritSon = Convert.ToInt32(Console.ReadLine());
-                if (min > kiritSon)
-                {
-                    min = kiritSon;
-                }
-                if (max < kiritSon)
-                {
-                    max = kiritSon;
-                }
+            //double limit, kiritSon, min, max, sum;
+            //Console.Write("limit : ");
+            //limit = Convert.ToDouble(Console.ReadLine());
+            //kiritSon = Convert.ToDouble(Console.ReadLine());
+            //min = kiritSon;
+            //max = kiritSon;
+            //sum = kiritSon;
+            //for (int i = 1; i < limit; i++)
+            //{
+            //    kiritSon = Convert.ToDouble(Console.ReadLine());
+            //    if (min > kiritSon)
+            //    {
+            //        min = kiritSon;
+            //    }
+            //    if (max < kiritSon)
+            //    {
+            //        max = kiritSon;
+            //    }
 
-                sum += kiritSon;
+            //    sum += kiritSon;
+            //}
+
+            //sum -= (max + min);
+            //Console.WriteLine($"o'rta qiymat : {sum / (limit - 2)}");
+
+            //21 - tugadi
+
+            //int limit, kiritSon, min1, min2 = 0;
+            //Console.Write("limit : ");
+            //limit = Convert.ToInt32(Console.ReadLine());
+            //// 6 --> 1 3 2 5 6 9 ==> 1, 2
+            //kiritSon = Convert.ToInt32(Console.ReadLine());
+            //min1 = kiritSon;
+            //min2 = kiritSon;
+            //for (int i = 1; i < limit; i++)
+            //{
+            //    kiritSon = Convert.ToInt32(Console.ReadLine());
+            //    if (min1 > kiritSon)
+            //    {
+            //        min2 = kiritSon;
+            //        min1 = kiritSon;
+            //    }
+
+            //}
+            //Console.WriteLine($"\n{min1} va {min2}");
+
+            // 22 - misol 
+
+            int limit, kiritilganSon = 0, kiritilganniSaqla = 0, max = int.MinValue;
+            Console.Write("Limit : ");
+            limit = Convert.ToInt32(Console.ReadLine());
+            for (int i = 1; i <= limit; i++)
+            {
+                kiritilganSon = Convert.ToInt32(Console.ReadLine());
+                if (max < kiritilganSon + kiritilganniSaqla)
+                {
+                    max = kiritilganniSaqla + kiritilganSon;
+                }
+                kiritilganniSaqla = kiritilganSon;
             }
 
-            sum -= (max + min);
-            Console.WriteLine($"o'rta qiymat : {sum / (limit - 2)}");
+            Console.WriteLine($"max son : {max}");
+
+            
+
+
         }
     }
 }
